@@ -1,0 +1,35 @@
+{
+    "name": "chapay/flarum-ext-audio",
+    "description": "Allows to add HTML5 audio player to posts.",
+    "type": "flarum-extension",
+    "keywords": ["formatting", "audio"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Sobkanyuk",
+            "email": "github@chapay.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/chapay/flarum-ext-audio/issues",
+        "source": "https://github.com/chapay/flarum-ext-audio"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chapay\\Audio\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Audio",
+            "icon": {
+                "name": "play",
+                "backgroundColor": "#333",
+                "color": "#fff"
+            }
+        }
+    }
+}
