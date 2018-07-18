@@ -32,5 +32,17 @@ class AddBBCode
             '[AUDIO]{URL;useContent}[/AUDIO]',
             '<audio src="{URL}" preload="none" controls>Sorry, your browser does not support this audio player or the file type.</audio>'
         );
+        $event->configurator->BBCodes->addCustom(
+            '[AUDIO]mp3={MP3;useContent}ogg={OGG;useContent}wav={WAV;useContent}[/AUDIO]',
+            '<audio preload="none" controls><source src="{MP3}" type="audio/mpeg"><source src="{OGG}" type="audio/ogg"><source src="{WAV}" type="audio/wav">Sorry, your browser does not support this audio player or the file type.</audio>'
+        );
+        $event->configurator->BBCodes->addCustom(
+            '[AUDIO]mp3={MP3;useContent}ogg={OGG;useContent}[/AUDIO]',
+            '<audio preload="none" controls><source src="{MP3}" type="audio/mpeg"><source src="{OGG}" type="audio/ogg">Sorry, your browser does not support this audio player or the file type.</audio>'
+        );
+        $event->configurator->BBCodes->addCustom(
+            '[AUDIO]mp3={MP3;useContent}wav={WAV;useContent}[/AUDIO]',
+            '<audio preload="none" controls><source src="{MP3}" type="audio/mpeg"><source src="{WAV}" type="audio/wav">Sorry, your browser does not support this audio player or the file type.</audio>'
+        );
     }
 }
