@@ -30,7 +30,7 @@ class AddBBCode
     {
         $event->configurator->BBCodes->addCustom(
             '[AUDIO]{URL;useContent}[/AUDIO]',
-            '<audio controls preload="none"><source src="{URL}" type="audio/mpeg">Your browser does not support the audio element.</audio>'
+            '<audio src="{URL}" preload="none" controls>Sorry, your browser does not support this audio player or the file type.</audio>'
         );
     }
 }
