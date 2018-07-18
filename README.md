@@ -1,6 +1,6 @@
 # Flarum Audio BBCode
 
-Extension allows to add HTML5 audio player to posts using BBCode.
+Extension which allows one to add a HTML5 audio player to posts using BBCode. It works best if you only use this with mp3 files.
 
 ## Usage
 
@@ -11,5 +11,5 @@ Extension allows to add HTML5 audio player to posts using BBCode.
 ## Installation
 
 ```
-composer require chapay/flarum-ext-audio
+composer require breathingboard/flarum-ext-audio:*
 ```
