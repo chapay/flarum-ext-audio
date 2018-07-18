@@ -1,25 +1,30 @@
 {
-    "name": "chapay/flarum-ext-audio",
-    "description": "Allows to add HTML5 audio player to posts.",
+    "name": "breathingboard/flarum-ext-audio",
+    "description": "Adds a new BBcode which allows one to wrap a mp3 URL with audio tags which converts the URL to a HTML music player.",
     "type": "flarum-extension",
-    "keywords": ["formatting", "audio"],
+    "keywords": ["formatting", "audio", "mp3"],
     "license": "MIT",
     "authors": [
         {
             "name": "Andrey Sobkanyuk",
             "email": "github@chapay.com"
+        },
+        {
+            "name": "Billy Wilcosky",
+            "email": "admin@breathingboard.com",
+            "homepage": "https://breathingboard.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/chapay/flarum-ext-audio/issues",
-        "source": "https://github.com/chapay/flarum-ext-audio"
+        "issues": "https://github.com/breathingboard/flarum-ext-audio/issues",
+        "source": "https://github.com/breathingboard/flarum-ext-audio"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.3"
+        "flarum/core": "*"
     },
     "autoload": {
         "psr-4": {
-            "Chapay\\Audio\\": "src/"
+            "Breathingboard\\Audio\\": "src/"
         }
     },
     "extra": {
