@@ -1,8 +1,8 @@
 {
     "name": "breathingboard/flarum-ext-audio",
-    "description": "Adds a new BBcode which allows one to wrap a mp3 URL with audio tags which converts the URL to a HTML music player.",
+    "description": "Adds a new BBcode which allows one to wrap a mp3 or ogg URL with audio tags which converts the URL to a HTML music player.",
     "type": "flarum-extension",
-    "keywords": ["formatting", "audio", "mp3"],
+    "keywords": ["formatting", "audio", "mp3", "ogg"],
     "license": "MIT",
     "authors": [
         {
