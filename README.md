@@ -1,11 +1,16 @@
 # Flarum Audio BBCode
 
-Extension which allows one to add a HTML5 audio player to posts using BBCode. The mp3 is still the most widely supported audio file type and so it is recommended to use that. However, ogg audio files work in some browsers as well.
+An extension for Flarum which adds two BBCodes. One is `[audio]` and it will turn a mp3, ogg, or wav URL into your browser's default audio player. The other is `[sound]` and it will turn your mp3, mp4, ogg, opus, wav, or flac URL into a simple CSS/JavaScript audio player thanks to Soundmanager2.
 
 ## Usage
 
 ```
-[audio]Link to audio file[/audio]
+[audio]URL to audio file[/audio]
+```
+OR
+
+```
+[sound="URL to audio file"]Title of audio file[/sound]
 ```
 
 ## Installation
