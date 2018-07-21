@@ -26,11 +26,16 @@ class AddBBCode
     /**
      * @param ConfigureFormatter $event
      */
+    
     public function AddBBCode(ConfigureFormatter $event)
     {
         $event->configurator->BBCodes->addCustom(
-            '[AUDIO]{URL;useContent}[/AUDIO]',
+            '[audio]{URL;useContent}[/audio]',
             '<audio src="{URL}" preload="none" controls>Sorry your browser does not support this audio player or the file type.</audio>'
+        );
+        $event->configurator->BBCodes->addCustom(
+            '[sound="{URL;useContent}"]{TEXT}[/sound]',
+            '<a href="{URL}">{TEXT}</a><script>soundManager.reboot();</script>'
         );
     }
 }
