@@ -2,12 +2,13 @@
 
 /*
  * (c) Andrey Sobkanyuk <github@chapay.com>
+ * (c) Billy Wilcosky <admin@breathingboard.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Chapay\Audio\Listener;
+namespace Breathingboard\Audio\Listener;
 
 use Flarum\Event\ConfigureFormatter;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -25,11 +26,16 @@ class AddBBCode
     /**
      * @param ConfigureFormatter $event
      */
+    
     public function AddBBCode(ConfigureFormatter $event)
     {
         $event->configurator->BBCodes->addCustom(
-            '[AUDIO]{URL;useContent}[/AUDIO]',
-            '<audio src="{URL}" controls preload="none"><p>Your browser does not support the <code>audio</code> element.</p></audio>'
+            '[audio]{URL;useContent}[/audio]',
+            '<audio src="{URL}" preload="none" controls>Sorry your browser does not support this audio player or the file type.</audio>'
+        );
+        $event->configurator->BBCodes->addCustom(
+            '[sound="{URL;useContent}"]{TEXT}[/sound]',
+            '<a href="{URL}">{TEXT}</a><script>soundManager.reboot();</script>'
         );
     }
 }
