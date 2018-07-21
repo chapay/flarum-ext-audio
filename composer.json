@@ -24,7 +24,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Breathingboard\\Audio\\": "src/"
+            "Breathingboard\\Audio\\": "src/",
+            "Breathingboard\\Audio\\": "assets/"
         }
     },
     "extra": {
